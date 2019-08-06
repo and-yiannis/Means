@@ -1,11 +1,23 @@
 REST
 Representational State Transfer
 
-===========================================================
-INDEX    /dogs          GET      List all dogs
-NEW      /dogs/new      GET      Show new dog form
-CREATE   /dogs          POST     Create a new dog, then redirect somewhere
-SHOW     /dogs/:id      GET      Show info about one specific dog
-EDIT     /dogs/:id/edit GET      Show edit form for one dog     
-UPDATE   /dogs/:id      PUT      Update a particular dog, then redirect somewhere
-DESTROY  /dogs/:id      DELETE   Delete a particular dog, then redirect somewhere
+Name     Path           HTTP verb Mongoose Method         Purpose                                           
+======== ============== ========= ======================= =================================================
+INDEX    /dogs          GET       Dog.find()              List all dogs                                     
+NEW      /dogs/new      GET       N/A                     Show new dog form                                 
+CREATE   /dogs          POST      Dog.create()            Create a new dog, then redirect somewhere         
+SHOW     /dogs/:id      GET       Dog.findById()          Show info about one specific dog                  
+EDIT     /dogs/:id/edit GET       Dog.findById()          Show edit form for one dog                        
+UPDATE   /dogs/:id      PUT       Dog.findByIdAndUpdate() Update a particular dog, then redirect somewhere  
+DESTROY  /dogs/:id      DELETE    Dog.findByIdAndRemove() Delete a particular dog, then redirect somewhere  
+
+
+#Associations
+
+## Intro to associations
+* Define associations
+* Discuss one:one, one:many, and many:many relationships
+
+##Embedding Data
+
+##Referencing Data
